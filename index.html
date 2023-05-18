@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" type="module"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&display=swap');
+         
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            background-color: #270b0b;
+            min-height: 100vh;
+        }
+        .meatNbones {
+            display: flex;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .header {
+            background-color: #ff04046c;
+            border-radius: 5px;
+            font-size:xx-large;
+            color:white;
+            font-family: 'Kaushan Script', cursive;
+        }
+        .header > * {
+            margin-left: 15px;
+        }
+
+        .allProjs {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            background-color: #ff04046c ;
+            border-radius: 5px;
+            padding: 0px;
+            align-items: center;
+            color: #000000;
+            font-family: 'Kaushan Script', cursive;
+            
+        }
+
+        .allProjs > h2 {
+            border: 3px solid rgb(255, 255, 255); 
+            padding: 10px;
+            width: 75%;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            height: 75px;
+        }
+
+        .lkdwn {
+            width: 120px;
+            height: 120px;
+            margin-top: 25px;
+        }
+        .holderPrj {
+            width: 95%;
+            background-color: #0300006c;
+            height: 65px;
+            margin-top: -25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            color: white;
+            font-family: 'Kaushan Script', cursive;
+            font-weight: bolder;
+            
+        }
+
+
+
+        .projAdder {
+            margin-top: 17px;
+            width: 85%;
+            height: 35px;
+            border-radius: 5px;
+            font-family: 'Kaushan Script', cursive;
+            font-size: larger;
+            
+        }
+
+         .projAdder:hover {
+            background-color: rgb(223, 206, 206);
+         }
+
+         .declare {
+            display: flex;
+            gap: 5px;
+            margin-top: 17px;
+         }
+
+         .declare > h3 {
+            border: 3px solid rgb(255, 255, 255); 
+           display: flex;
+           align-items: center;
+           padding: 10px;
+           font-size: 25px;
+           width: 145px;
+           margin-left: 5px;
+          
+         }
+
+         .projList {
+            flex-grow: 1;
+            width: 95%;
+            background-color: #0300006c;
+            height: 38%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+            gap: 5px;
+            color: white;
+            align-items: center;
+            font-size: larger;  
+         }
+
+         .projList > * {
+            border: 3px solid rgb(255, 255, 255); 
+            padding: 3px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 85%;
+         }
+
+
+
+         .projList > *:hover {
+            border: 6px solid rgb(255, 255, 255); 
+         }
+
+         .todo {
+            display: flex;
+            flex-direction: column;
+            background-color: #ff04046c ;
+            border-radius: 5px;
+            padding: 0px;
+            width: 100%;
+            color: #000000;
+            font-family: 'Kaushan Script', cursive;
+         }
+
+         .todo > h1 {
+            justify-self: flex-start;
+            display: flex;
+            justify-content: flex-end;
+            padding: 25px;
+            font-size: 45px;
+            border-bottom: 3px solid rgb(255, 255, 255); 
+            background-color: #0202026c;
+            margin-top: -0.2px;
+            
+         }
+
+         .todos {
+         height: 100%;
+         display: flex;
+         justify-content: space-between;
+
+         }
+
+         .allLists {
+           width: 45%;
+           display: flex;
+           flex-direction: column;
+           margin-left: 35px;
+         }
+
+         .allLists > * {
+            margin-bottom: 15px;
+            border: 2px solid rgb(255, 255, 255); 
+            background-color: #000000;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+         }
+
+        
+         .addTdo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 205px;
+            height: 207px;
+            width: 207px;
+            margin-right: 45px;
+         }
+
+         .addTdo:hover {
+            background-color: rgb(223, 206, 206);
+         }
+
+         .allLists{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+         }
+
+         .allLists > * {
+            display: flex;
+         }
+
+
+
+
+         
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header"><h1>ToDoList</h1></div>
+    <div class="meatNbones">
+        <div class="allProjs">
+        <h2>Projects</h2>
+        <div class="holderPrj"></div>
+        <button class="projAdder">New Project</button>
+        <div class="declare"><h3>Your Projects!</h3><img class="lkdwn" src="pointing-down-finger-svgrepo-com.svg" alt=""></div>
+        <div class="projList"></div>
+    </div>
+    <div class="todo">
+       <h1>Your Current Todo List</h1>
+        <div class="todos">
+        <div class="allLists"></div>
+        <button class="addTdo">+</button> 
+        </div>
+    </div>
+</div>
+
+ 
+    
+    
+</body>
+</html>
